@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/setting" android:title="Setting" android:icon="@drawable/ic_setting" ></item>
-    <item android:id="@+id/mychart" android:title="My Cart" android:icon="@drawable/ic_shopping_cart"></item>
-    <item android:id="@+id/logout" android:title="Log Out" android:icon="@drawable/ic_logout"></item>
+    <item android:id="@+id/setting" android:title="Setting" android:icon="@drawable/ic_setting" />
+    <item android:id="@+id/mychart" android:title="My Cart" android:icon="@drawable/ic_shopping_cart"/>
+    <item android:id="@+id/signOut" android:title="Log Out" android:icon="@drawable/ic_logout"/>
 
 </menu>

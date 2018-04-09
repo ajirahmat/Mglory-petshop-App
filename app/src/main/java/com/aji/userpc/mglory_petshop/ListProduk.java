@@ -2,6 +2,7 @@ package com.aji.userpc.mglory_petshop;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,6 +22,7 @@ public class ListProduk extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     ListView listViewProduk;
+    RecyclerView recyclerView;
     DatabaseReference databaseProduk;
 
     List<Produk> produks;
@@ -32,7 +34,8 @@ public class ListProduk extends AppCompatActivity {
 
         listViewProduk = (ListView) findViewById(R.id.listViewProduks2);
 
-        databaseProduk = FirebaseDatabase.getInstance().getReference("Produk");
+        String kategori = getIntent().getStringExtra("kategori");
+        databaseProduk = FirebaseDatabase.getInstance().getReference("Produk").child(kategori);
 
         produks = new ArrayList<>();
     }

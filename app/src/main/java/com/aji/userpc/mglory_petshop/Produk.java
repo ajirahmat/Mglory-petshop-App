@@ -10,9 +10,18 @@ public class Produk {
     private String hargaProduk;
     private String deskripsiProduk;
     private String kategoriProduk;
+    public String image_url;
 
     public Produk(){
 
+    }
+    public Produk(String id, String namaProduk, String hargaProduk, String deskripsiProduk, String kategoriProduk,String image_url) {
+        this.id = id;
+        this.namaProduk = namaProduk;
+        this.hargaProduk = hargaProduk;
+        this.deskripsiProduk = deskripsiProduk;
+        this.kategoriProduk = kategoriProduk;
+        this.image_url = image_url;
     }
 
     public Produk(String id, String namaProduk, String hargaProduk, String deskripsiProduk, String kategoriProduk) {
@@ -31,6 +40,9 @@ public class Produk {
     }
 
 
+    public String getImage_url() {
+        return image_url;
+    }
 
     public String getId() {
         return id;
@@ -41,14 +53,17 @@ public class Produk {
     }
 
     public String getHargaProduk() {
+
         return hargaProduk;
     }
 
     public String getDeskripsiProduk() {
+
         return deskripsiProduk;
     }
 
     public String getKategoriProduk() {
+
         return kategoriProduk;
     }
 }
