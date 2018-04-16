@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -17,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 public class ListProduk extends AppCompatActivity {
 
@@ -34,12 +37,24 @@ public class ListProduk extends AppCompatActivity {
 
         listViewProduk = (ListView) findViewById(R.id.listViewProduks2);
 
-        recyclerView.setHasFixedSize(true);
+
 
         String kategori = getIntent().getStringExtra("kategori");
         databaseProduk = FirebaseDatabase.getInstance().getReference("Produk").child(kategori);
 
-        produks = new ArrayList<>();
+        produks = ShoppingCartHelper.getCatalog(getResources());
+
+
+//        listViewProduk.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+//
+//                Produk produk = produks.get(i);
+//                showUpdateDeleteDialog(produk.getId(), produk.getNamaProduk(),
+//                        produk.getHargaProduk(), produk.getKategoriProduk());
+//                return true;
+//            }
+//        });
     }
 
     @Override
