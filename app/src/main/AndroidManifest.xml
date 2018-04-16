@@ -19,16 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashScreen">
-
-        </activity>
-        <activity android:name=".CrudProduk" >
-
-        </activity>
-        <activity android:name=".ListProduk">
-
-        </activity>
-        <activity android:name=".Login"></activity>
+        <activity android:name=".SplashScreen"></activity>
+        <activity android:name=".CrudProduk"></activity>
+        <activity android:name=".ListProduk"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".ProductDetails"></activity>
     </application>
 
 </manifest>

@@ -1,13 +1,15 @@
 package com.aji.userpc.mglory_petshop;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
 
@@ -19,14 +21,13 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
 public class ListProduk extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     ListView listViewProduk;
-    RecyclerView recyclerView;
     DatabaseReference databaseProduk;
+    ImageButton btnDetail;
 
     List<Produk> produks;
 
@@ -37,24 +38,24 @@ public class ListProduk extends AppCompatActivity {
 
         listViewProduk = (ListView) findViewById(R.id.listViewProduks2);
 
-
-
         String kategori = getIntent().getStringExtra("kategori");
         databaseProduk = FirebaseDatabase.getInstance().getReference("Produk").child(kategori);
+        btnDetail = (ImageButton) findViewById(R.id.detailBtn);
 
-        produks = ShoppingCartHelper.getCatalog(getResources());
+        produks = ShoppingCartHelper.getCatalog(getResources());;
 
 
-//        listViewProduk.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-//
-//                Produk produk = produks.get(i);
-//                showUpdateDeleteDialog(produk.getId(), produk.getNamaProduk(),
-//                        produk.getHargaProduk(), produk.getKategoriProduk());
-//                return true;
-//            }
-//        });
+        listViewProduk.setOnItemClickListener(new OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent productDetailsIntent = new Intent(getBaseContext(),ProductDetails.class);
+                productDetailsIntent.putExtra(ShoppingCartHelper.PRODUCT_INDEX, position);
+                startActivity(productDetailsIntent);
+            }
+        });
+
+
     }
 
     @Override
@@ -75,6 +76,10 @@ public class ListProduk extends AppCompatActivity {
 
                 ProdukAdapterUser produkAdapter = new ProdukAdapterUser(ListProduk.this, produks);
                 listViewProduk.setAdapter(produkAdapter);
+
+
+
+
             }
 
             @Override
@@ -84,4 +89,8 @@ public class ListProduk extends AppCompatActivity {
             }
         });
     }
+
+
+
+
 }
