@@ -36,14 +36,14 @@ public class lokasi extends AppCompatActivity {
             public void onClick(View view) {
                 Intent locationPickerIntent = new LocationPickerActivity.Builder()
                         .withLocation(41.4036299, 2.1743558)
-                        //.withGeolocApiKey("<PUT API KEY HERE>")
+                        .withGeolocApiKey("<PUT API KEY HERE>")
                         .withSearchZone("es_ES")
-                        //.shouldReturnOkOnBackPressed()
-                        //.withStreetHidden()
-                        //.withCityHidden()
-                        //.withZipCodeHidden()
-                        //.withSatelliteViewHidden()
-                        //.withGooglePlacesEnabled()
+                        .shouldReturnOkOnBackPressed()
+                        .withStreetHidden()
+                        .withCityHidden()
+                        .withZipCodeHidden()
+                        .withSatelliteViewHidden()
+                        .withGooglePlacesEnabled()
                         .build(getApplicationContext());
 
                 //this is optional if you want to return RESULT_OK if you don't set the latitude/longitude and click back button
