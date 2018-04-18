@@ -1,32 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.aji.userpc.mglory_petshop.lokasi.">
-    <android.support.design.widget.AppBarLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:theme="@style/AppTheme.AppBarOverlay">
+    tools:context=".MainActivity"
+    >
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
 
-</android.support.design.widget.AppBarLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:contentDescription="@string/leku_app_name"
+            />
 
-<include layout="@layout/lokasi_main" />
 
-<android.support.design.widget.FloatingActionButton
-android:id="@+id/fab"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_gravity="bottom|end"
-android:layout_margin="@dimen/fab_margin"
-android:src="@drawable/ic_location_searching" />
+        <Button
+            android:text="@string/launch_map_picker"
+            android:id="@+id/map_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/leku_app_button_border"
+            android:textColor="@color/leku_app_strong_blue"
+            tools:targetApi="lollipop"
+            />
+        <Button
+            android:text="@string/launch_map_picker_with_pois"
+            android:id="@+id/map_button_with_pois"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/leku_app_button_border"
+            android:textColor="@color/leku_app_strong_blue"
+            tools:targetApi="lollipop"
+            />
+    </LinearLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+    <TextView
+        android:id="@+id/leku_app_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/leku_lib_version"
+        android:textAlignment="center"
+        android:layout_gravity="bottom"
+        android:paddingBottom="8dp"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/leku_app_strong_blue"
+        />
+</merge>

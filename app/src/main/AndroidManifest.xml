@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".lokasi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +26,7 @@
         <activity android:name=".Care" />
         <activity android:name=".Aksesoris" />
         <activity android:name=".ShoppingCart" />
-        <activity android:name=".lokasi" />
+
         <activity android:name=".CheckoutOrder"></activity>
     </application>
 

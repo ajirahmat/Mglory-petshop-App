@@ -11,4 +11,6 @@
     <color name="green">#40ef66</color>
     <color name="darkgreen">#e1f4e5</color>
     <color name="deeppurple">#7c4dff</color>
+    <color name="leku_app_blue">#3DA8E1</color>
+    <color name="leku_app_strong_blue">#053B58</color>
 </resources>
