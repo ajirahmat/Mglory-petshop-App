@@ -51,21 +51,21 @@ public class ShoppingCart extends AppCompatActivity {
             }
         });
 
-        Button removeButton = (Button) findViewById(R.id.ButtonRemoveFromCart);
-        removeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Loop through and remove all the products that are selected
-                // Loop backwards so that the remove works correctly
-                for(int i=mCartList.size()-1; i>=0; i--) {
-
-                    if(mCartList.get(i).selected) {
-                        mCartList.remove(i);
-                    }
-                }
-                mProductAdapter.notifyDataSetChanged();
-            }
-        });
+//        Button removeButton = (Button) findViewById(R.id.ButtonRemoveFromCart);
+//        removeButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Loop through and remove all the products that are selected
+//                // Loop backwards so that the remove works correctly
+//                for(int i=mCartList.size()-1; i>=0; i--) {
+//
+//                    if(mCartList.get(i).selected) {
+//                        mCartList.remove(i);
+//                    }
+//                }
+//                mProductAdapter.notifyDataSetChanged();
+//            }
+//        });
 
     }
 
