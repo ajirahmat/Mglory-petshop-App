@@ -11,3 +11,4 @@ public class StatusTransaksi extends AppCompatActivity {
         setContentView(R.layout.activity_status_transaksi);
     }
 }
+
