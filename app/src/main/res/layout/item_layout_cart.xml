@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/produkImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:focusable="false"
+            android:clickable="false"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/nama_produk"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_toEndOf="@+id/produkImage"
+            android:layout_toRightOf="@+id/produkImage"
+            android:padding="5dp"
+            android:text="title produk" />
+
+        <TextView
+            android:id="@+id/harga_produk"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nama_produk"
+            android:layout_toEndOf="@+id/produkImage"
+            android:layout_toRightOf="@+id/produkImage"
+            android:clickable="false"
+            android:focusable="false"
+            android:padding="2dp"
+            android:text="harga produk"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/harga_produk"
+            android:layout_alignBottom="@+id/harga_produk"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="34dp"
+            android:layout_marginRight="34dp" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/checkBox"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/spinner2"
+            android:layout_toEndOf="@+id/produkImage"
+            android:layout_toRightOf="@+id/produkImage"
+            android:text="Jumlah"
+            android:textSize="15sp" />
+
+        <!--<RatingBar-->
+        <!--android:id="@+id/ratingBar"-->
+        <!--style="@style/customRatingBar"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_below="@+id/harga_produk"-->
+        <!--android:layout_toEndOf="@+id/produkImage"-->
+        <!--android:layout_toRightOf="@+id/produkImage"-->
+        <!--android:numStars="5"-->
+        <!--android:padding="2dp"-->
+        <!--android:rating="2"-->
+        <!--android:stepSize="1" />-->
+
+    </RelativeLayout>
+
+</LinearLayout>
