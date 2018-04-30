@@ -8,20 +8,47 @@
     <TextView android:id="@+id/TextView01" android:layout_width="wrap_content"
         android:layout_height="wrap_content" android:textColor="#000000"
         android:textSize="24dip" android:layout_margin="5dip" android:text="Shopping Cart"></TextView>
-    <TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dip" android:text="Click on a product to edit the quantity"></TextView>
-    <ListView android:layout_height="wrap_content"
-        android:layout_weight="1" android:id="@+id/ListViewCatalog"
-        android:layout_width="fill_parent" android:background="#ffffff"
-        android:cacheColorHint="#ffffff" android:clickable="true"
-        android:choiceMode="multipleChoice">
+
+    <TextView
+        android:id="@+id/TotalHarga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="total harga" />
+
+    <ListView
+        android:id="@+id/ListViewCatalog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:cacheColorHint="#ffffff"
+        android:choiceMode="multipleChoice"
+        android:clickable="true">
 
     </ListView>
+
     <LinearLayout android:layout_width="wrap_content"
         android:layout_height="wrap_content" android:orientation="horizontal"
         android:layout_margin="5dip"
         android:id="@+id/LinearLayoutCheckout" android:layout_gravity="right">
-        <Button android:id="@+id/Button02" android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:text="Proceed to Checkout"></Button>
+
+        <Button
+            android:id="@+id/CheckoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proceed to Checkout"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:textColor="#FF080808"></Button>
+
+        <Button
+            android:id="@+id/BtnHapus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="HAPUS PRODUK"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:textColor="#FF080808"/>
+
     </LinearLayout>
 
 </LinearLayout>

@@ -11,6 +11,7 @@ public class Produk {
     private String deskripsiProduk;
     private String kategoriProduk;
     public String image_url;
+    public boolean selected;
 
     public Produk(){
 
