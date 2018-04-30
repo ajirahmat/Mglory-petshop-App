@@ -23,8 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/tvTotalHarga"
-        android:layout_marginTop="45dp"
+        android:layout_centerVertical="true"
         android:text="Pesan Sekarang"
         android:textColor="#FF080808" />
 
@@ -38,14 +37,31 @@
         android:layout_marginLeft="12dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="19dp"
-        android:text="harga " />
+        android:text="harga "
+        android:textSize="15sp" />
 
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView4"
-        android:layout_width="400dp"
-        android:layout_height="300dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    <Button
+        android:id="@+id/btn_place"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvTotalHarga"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="32dp"
+        android:text="PILIH LOKASI"
+        android:textColor="#FF080808" />
+
+    <TextView
+        android:id="@+id/tvPlace"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/tvTotalHarga"
+        android:layout_alignStart="@+id/tvTotalHarga"
+        android:layout_alignTop="@+id/btn_place"
+        android:text="Place name..."
+        android:textSize="15sp" />
 
 </RelativeLayout>
