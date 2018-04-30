@@ -6,6 +6,9 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -14,27 +17,57 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".SplashScreen"></activity>
-        <activity android:name=".CrudProduk"></activity>
-        <activity android:name=".ListProduk"></activity>
-        <activity android:name=".Login">
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDLrMOyUNhX6sSmiGpAfieDNiSyy-oHJ8s" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUp" />
 
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
+        <activity android:name=".MainActivity" ></activity>
+
+        <activity android:name=".CrudProduk"></activity>
+
+        <activity android:name=".ListProduk"></activity>
+
+        <activity android:name=".Login"></activity>
+
+        <activity android:name=".SignUp"></activity>
+
+        <activity android:name=".CheckoutOrder"></activity>
+
+        <activity android:name=".DetailProduk"></activity>
+
+
+        <activity android:name=".RiwayatTransaksi"></activity>
+
+        <activity android:name=".SettingProfile"></activity>
+
+        <activity android:name=".ShoppingCart"></activity>
+
 
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
+
         <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true">
@@ -48,18 +81,9 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyC6js7VmtuOUwLpCYudvELIAtoP9Vf3iOs" />
 
-        <activity android:name=".Status" />
-        <activity android:name=".Food" />
-        <activity android:name=".Buy" />
-        <activity android:name=".Care" />
-        <activity android:name=".Aksesoris" />
-        <activity android:name=".ShoppingCart" />
-        <activity android:name=".CheckoutOrder" />
-        <activity android:name=".RiwayatTransaksi"></activity>
+
+
     </application>
 
 </manifest>
